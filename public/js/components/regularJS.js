@@ -1,11 +1,25 @@
+var gameState = {
+  pokemon: ''
+}
+
+console.log(gameState)
+
 var pokemonsEL = document.querySelector('.select-screen')
   .querySelectorAll('.character')
 console.log(pokemonsEL)
 
-i = 0;
-while (i < pokemonsEL.length) {
-  pokemonsEL[i]
 
+// Takeaway: remember that querySelector means you are querying an array.  Query ~ Array
+// verify that your variable really are/is plural or singular 
+// utilize the dataset ~ data-pokemon   (this is very useful)
+var i = 0;
+while (i < pokemonsEL.length) {
+  pokemonsEL[i].onclick = function () {
+    var pokemonName = this.dataset.pokemon
+    // console.log('I pressed this pokemon ' + pokemonName)
+    gameState.pokemon = pokemonName
+    console.log(gameState)
+  }
   i++
 }
 
