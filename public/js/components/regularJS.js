@@ -1,5 +1,6 @@
 var gameState = {
-  pokemon: ''
+  pokemon: '',
+  rivalPokemon: ''
 }
 
 console.log(gameState)
@@ -17,12 +18,21 @@ while (i < pokemonsEL.length) {
   pokemonsEL[i].onclick = function () {
     var pokemonName = this.dataset.pokemon
     // console.log('I pressed this pokemon ' + pokemonName)
-    gameState.pokemon = pokemonName
+    gameState.userPokemon = pokemonName
+    cpuPick()
     console.log(gameState)
   }
   i++
 }
 
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function cpuPick() {
+  gameState.rivalPokemon = pokemonsEL[randomNumber(0, 3)]
+    .dataset.pokemon
+}
 
 
 
