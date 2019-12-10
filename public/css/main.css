@@ -303,6 +303,7 @@ h1 {
     padding: 100px 50px;
     overflow: auto;
     height: 100vh;
+    position: relative;
 }
 
 #battle-screen .fight-btn {
