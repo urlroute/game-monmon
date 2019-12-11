@@ -217,7 +217,9 @@ h1 {
     border-bottom: 2px solid #4B37A3;
     width: 100%;
     position: absolute;
-    /* position: absolute;  this will make the selector screeen not overlap fighting screen */
+
+
+    /* this will make the selector screeen not overlap fighting screen */
 }
 
 .header .mode {
