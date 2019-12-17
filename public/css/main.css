@@ -197,6 +197,8 @@ h1 {
 /*font-family: 'Cabin Sketch', cursive;*/
 /*font-family: 'Freckle Face', cursive;*/
 /*font-family: 'Press Start 2P', cursive;*/
+
+/***************************  JSG told to add this code *********************/
 * {
     box-sizing: border-box;
 }
@@ -207,7 +209,7 @@ body {
     overflow: hidden;
 }
 
-
+/* *********************************************************** */
 
 
 /* SELECT SCREEN ============================================================*/
@@ -226,9 +228,7 @@ body {
     border-bottom: 2px solid #4B37A3;
     width: 100%;
     position: absolute;
-
-
-    /* this will make the selector screeen not overlap fighting screen */
+    /* this will make the selector screeen not overlap fighting screen ******************************************/
 }
 
 .header .mode {
@@ -290,6 +290,8 @@ body {
     border: 3px solid #000;
     float: left;
     margin: 0 25px;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
 }
 
 .select-screen .main .character.charmander {
@@ -304,6 +306,12 @@ body {
     background: #64B2FA;
 }
 
+.select-screen .main .character:hover {
+    background: #261c53;
+
+}
+
+
 /* BATTLE SCREEN ============================================================*/
 #battle-screen {
     background: url(//i.imgur.com/UZKEjzG.png) no-repeat center center;
@@ -312,17 +320,24 @@ body {
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
     width: 100%;
-    padding: 100px 50px;
-    overflow: auto;
-    height: 100vh;
-    position: relative;
-    top:0;
-    transition: all 1s ease-in-out;
+        padding: 100px 50px;
+        overflow: auto;
+            height: 100vh;
+            position: relative;
+    
+            /* jsg */
+            /* top: 0;
+            transition: top .5s ease-in-out; */
+            /* jsg */
 }
 
 #battle-screen.active {
+    /* jsg */
     top: -100vh;
+    /* jsg */
 }
+
+/* jsg */
 
 
 #battle-screen .fight-btn {
